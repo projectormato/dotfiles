@@ -1,30 +1,13 @@
-#include <iostream>
-#include <string>
-#include <cstring>
-#include <cstdio>
-#include <algorithm>
-#include <vector>
-#include <set>
-#include <map>
-#include <queue>
-#include <numeric>
-
-#define FOR(i, f, n) for(int (i) = (f); (i) < (n); (i)++)
-#define RFOR(i, f, n) for(int (i) = (f); (i) >= (n); (i)--)
-#define rep(i, n) for(int (i) = 0; (i) < (n); (i)++)
-#define rrep(i, n) for(int (i) = (n); (i) >= 0; (i)--)
-#define step(i, f, n, a) for(int (i) = (f); (i) < (n); (i)+=a)
-#define rstep(i, f, n, a) for(int (i) = (f); (i) >= (n); (i)-=a)
-#define p(...) printf(__VA_ARGS__); cout << endl;
-#define gets(x) x; cin >> x;
-#define puts(x) x; cout << x << endl;
-#define list_input(x, n) x[(n)]; for(int (i) = 0; (i) < (n); (i)++) cin >> x[i];
-#define lambda(a, b, c) [](const a, const b){ return c ;}
-#define key(t, x, compare) [](const t& a, const t& b){ return a x compare b x ;}
-
+#include<bits/stdc++.h>
 using namespace std;
 
-using pii = pair<int, int>;
+#define step(i, s, n, d) for(int i=s; i<n; i+=d)
+#define FOR(i,s,n) step(i,s,n,1)
+#define rep(i,n) FOR(i,0,n)
+#define gets(x) x; cin >> x;
+#define puts(x) x; cout << x << endl;
+#define list_input(x, n) x[n]; rep(i,n){ gets(x[i]);}
+#define ll long long
 
 int main(){
 }
