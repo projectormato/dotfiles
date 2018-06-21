@@ -8,6 +8,7 @@ using namespace std;
 #define puts(x) x; cout << x << endl;
 #define list_input(x, n) x[n]; rep(i,n){ gets(x[i]);}
 #define ll long long
+typedef pair<int, int> P;
 
 int main(){
 }
