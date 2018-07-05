@@ -5,4 +5,4 @@ test:
 wall:
 	g++ -std=c++14 main.cpp -Wall -g -fsanitize=undefined -D_GLIBCXX_DEBUG; ./a.out
 icpc:
-	g++ -std=c++14 main.cpp; cat input | ./a.out >> output.txt
+	g++ -std=c++14 main.cpp; cat input | ./a.out > output
