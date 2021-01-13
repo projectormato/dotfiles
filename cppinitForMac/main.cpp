@@ -8,5 +8,6 @@ using namespace std;
 typedef pair<int, int> P;
 typedef map<int,int> M;
 
+// ref: https://cpprefjp.github.io/
 int main(){
 }
