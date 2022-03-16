@@ -1,8 +1,9 @@
 [user]
-  email = k.keita811.anuy@gmail.com
+  email = fixme
   name = projectormato
 
 [alias]
+  cd = switch
   co = checkout
   ci = commit
   cia = commit -a
@@ -34,5 +35,6 @@
   t = log -10 --oneline --all --decorate --graph
   p = !git push origin `git rev-parse --abbrev-ref HEAD`
   delete-merged-branch = !git branch --merged | grep -v \\* | grep -v master | xargs -I % git branch -d %
+  main = branch -M main
 [ghq]
   root = /home/keita/go/src/
