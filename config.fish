@@ -1,14 +1,29 @@
 set fish_greeting # Clear greeting
-set -gx PATH /usr/local/bin $PATH
+# set path
+set -g -x PATH /usr/local/bin $PATH
 
-# Path to Oh My Fish install.
-set -gx OMF_PATH $HOME/.local/share/omf
-# Customize Oh My Fish configuration path.
-#set -gx OMF_CONFIG $HOME/.config/omf
-# Load oh-my-fish configuration.
-source $OMF_PATH/init.fish
+# Node
+set -g -x PATH /Users/keita/.nodebrew/current/bin $PATH
 
-# Useful alias 
+# Flutter
+set -g -x PATH /Users/keita/mint/flutter/bin $PATH
+set -g -x PATH /Users/keita/mint/flutter/.pub-cache/bin $PATH
+
+# Ruby
+set -x PATH $HOME/.rbenv/bin $PATH
+source (rbenv init - | psub)
+
+# Go
+set -x PATH $HOME/go/bin $PATH
+
+# Python
+status is-login; and pyenv init --path | source
+status is-interactive; and pyenv init - | source
+
+# Node
+status --is-interactive; and source (nodenv init -|psub)
+
+# Useful alias
 alias grep 'grep --color=auto'
 alias ll='ls -alF'
 alias la='ls -A'
@@ -17,9 +32,17 @@ alias g='git'
 alias gcd='cd (git rev-parse --show-toplevel)'
 alias bundlelocal='bundle install --path=vendor/bundle --binstubs=vendor/bin'
 alias bundleglobal='bundle install'
-alias cppinit='cp ~/mint/xmlpro/cppinit/* ./'
+alias cppinit='cp ~/mint/GitHub/dotfiles/cppinitForMac/* ./'
+alias gconfig='cat ~/.gitconfig'
 
-#peco
+# Peco
 function fish_user_key_bindings
   bind \cr peco_select_history
 end
+# GHQ
+set GHQ_SELECTOR peco
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+# eval /Users/keita/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+# <<< conda initialize <<<

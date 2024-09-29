@@ -1,2 +1,1 @@
-# configs
-うっかり消えたりすると嬉しくないconfigたちの格納場所
+# dotfiles
