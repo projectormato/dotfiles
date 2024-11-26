@@ -20,8 +20,14 @@ set -x PATH $HOME/go/bin $PATH
 status is-login; and pyenv init --path | source
 status is-interactive; and pyenv init - | source
 
+# Poetry
+set -x PATH $HOME/.local/bin $PATH
+
 # Node
 status --is-interactive; and source (nodenv init -|psub)
+
+# mongo
+set -x PATH /usr/local/Cellar/mongodb-community/8.0.1/bin $PATH
 
 # Useful alias
 alias grep 'grep --color=auto'
